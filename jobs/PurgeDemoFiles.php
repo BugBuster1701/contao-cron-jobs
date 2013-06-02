@@ -16,19 +16,23 @@
  */
 
 /**
- * Initialize the system
+ * Initialize the system if necessary
  */
-define('TL_MODE', 'BE');
-require_once('../../../initialize.php');
+if (!defined('TL_MODE')) 
+{
+    define('TL_MODE', 'BE');
+    require_once('../../../initialize.php');
+}
+
 
 /**
  * Class PurgeLog
  * 
- * @copyright  Glen Langer 2012..2013 <http://www.contao.glen-langer.de>
+ * @copyright  Glen Langer 2013 <http://www.contao.glen-langer.de>
  * @author     Glen Langer (BugBuster)
- * @package    Cron
+ * @package    Cron_Job
  */
-class PurgeDemoFiles extends Backend
+class PurgeDemoFiles extends Controller //Backend
 {
     // delete files
     protected $file = 'templates/music_academy.sql';
