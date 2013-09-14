@@ -75,7 +75,7 @@ class PurgeLanguagesFiles extends Controller //Backend
             if (is_dir( TL_ROOT . '/' . $this->languages_dir . '/' . $dir ))
             {
                 $objDir = new Folder( $this->languages_dir . '/' . $dir );
-                $objDir->delete(); //intern: rrdir inkl. $this->dir
+                $objDir->delete(); //internal: rrdir incl. $this->dir
                 $objDir = null;
                 unset($objDir);
                 $this->killed = true;
@@ -94,7 +94,7 @@ class PurgeLanguagesFiles extends Controller //Backend
 } // class PurgeLanguagesFiles
 
 /**
- * Instantiate log purger
+ * Instantiate languages file purger
  */
 $objPurge = new PurgeLanguagesFiles();
 $objPurge->run();

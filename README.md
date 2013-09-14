@@ -1,4 +1,4 @@
-# Contao CRON Scheduler Jobs
+# Contao CRON-Scheduler Jobs
 
 ## About
 
@@ -10,3 +10,8 @@ Use the Extension Repository or create the directory ```system/modules/cron_jobs
 ## Jobs
 * Purges the Music Academy Demo files
   * Job path: ```system/modules/cron_jobs_bugbuster/jobs/PurgeDemoFiles.php```
+* Purges the superfluous languages files in system/modules/core/languages/ , not in any extensions
+  * Read the Notes in the job file. 
+  * In line 46 you can define the languages you want to keep
+  * Job path: ```system/modules/cron_jobs_bugbuster/jobs/PurgeLanguagesFiles.php```
+

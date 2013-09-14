@@ -26,7 +26,7 @@ if (!defined('TL_MODE'))
 
 
 /**
- * Class PurgeLog
+ * Class PurgeDemoFiles
  * 
  * @copyright  Glen Langer 2013 <http://www.contao.glen-langer.de>
  * @author     Glen Langer (BugBuster)
